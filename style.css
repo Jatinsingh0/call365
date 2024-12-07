@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding-left: 20px;
+    /* Add left padding */
+    padding-right: 20px;
+    /* Add right padding */
+    max-width: 100%;
+    /* Ensure the content doesn't exceed the width */
+  }
+  
+  /* Basic Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navbar links on a single line */
+  .navbar-links {
+    display: flex;
+    gap: 10px;
+    /* Space between the links */
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    font-size: 14px;
+    /* Reduced font size */
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navbar-links .dropdown {
+    position: relative;
+  }
+  
+  .navbar-links .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .navbar-links .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .navbar-center .logo {
+    font-size: 20px;
+    /* Larger logo font */
+  }
+  
+  .navbar-right a {
+    font-size: 14px;
+    /* Adjusted font size */
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Navbar Links */
+  .navbar a {
+    color: #000;
+    /* Black text color */
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  
+  /* Center (Logo) */
+  .navbar-center .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Dropdown Styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 1024px) {
+    .navbar-left {
+      display: none;
+    }
+  
+    .navbar {
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
+  }
+  
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    margin-left: auto;
+    /* Center content horizontally */
+    margin-right: auto;
+    /* Center content horizontally */
+    max-width: 1400px;
+    /* Optional: Limit the maximum width */
+  }
+  
+  
+  .left-side {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .left-side h1 {
+    font-size: 3.5rem;
+    /* Adjusting font size */
+    font-weight: 700;
+    /* Bold text */
+    line-height: 1.2;
+    /* Line height */
+  }
+  
+  .right-side {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .right-side p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  .learn-more-signup {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .learn-more-signup a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .signup {
+    font-size: 18px;
+    /* Adjusted font size for "Sign Up" */
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .left-side h1 {
+      line-height: 1;
+      /* Line height */
+    }
+  
+  }
+  
+  /* Image Section */
+  .image-section {
+    text-align: center;
+    /* Centers the image */
+    margin-top: 40px;
+    /* Adds space above the image */
+    padding: 0 20px;
+    /* Optional padding for smaller screens */
+  }
+  
+  .image {
+    width: 100%;
+    /* Makes the image responsive to screen width */
+    max-width: 1280px;
+    /* Limits the image width to 1280px */
+    height: auto;
+    /* Maintains aspect ratio automatically */
+    object-fit: contain;
+    /* Scales image to fit within container */
+    border-radius: 8px;
+    /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for style */
+  }
+  
+  
+  
+  /* Text Below Image */
+  .text-below-image {
+    text-align: center;
+    padding: 40px 20px;
+    /* Adds padding for spacing */
+  }
+  
+  .text-below-image .content {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* Centers the content */
+  }
+  
+  .text-below-image h2 {
+    font-size: 3.5rem;
+    /* Adjusted font size */
+    font-weight: 700;
+    /* Bold text */
+    line-height: 1.2;
+    /* Line height */
+    margin-bottom: 20px;
+    /* Adds space below the title */
+  }
+  
+  .text-below-image p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  /* Learn More and Sign Up Buttons */
+  .text-below-image {
+    margin-top: 50px;
+  }
+  
+  .learn-more-signup {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .learn-more-signup a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* Adjusted font size for buttons */
+  }
+  
+  .signup {
+    font-size: 18px;
+    /* Adjusted font size for "Sign Up" */
+    color: #000;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .text-below-image h2 {
+      font-size: 2.5rem;
+      /* Smaller font size on mobile */
+    }
+  
+    .text-below-image p {
+      font-size: 16px;
+      /* Smaller font size on mobile */
+    }
+  
+    .learn-more-signup a {
+      font-size: 1rem;
+      /* Smaller button text on mobile */
+    }
+  }
+  
+  .trackCall {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 40px 10px;
+    flex-wrap: wrap;
+    /* Allows the sections to stack on smaller screens */
+  }
+  
+  .trackCall .left-side,
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+  }
+  
+  /* Left Side */
+  .trackCall .left-side h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  
+  .trackCall .left-side p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    line-height: 22px;
+  }
+  
+  .trackCall .left-side-image {
+    width: 3rem;
+    /* Small image size */
+    height: 3rem;
+  }
+  
+  /* Right Side */
+  .trackCall .right-side-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    /* Ensure image maintains aspect ratio */
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .trackCall {
+      flex-direction: column;
+      /* Stacks left and right side vertically on small screens */
+      text-align: center;
+    }
+  
+    .trackCall .left-side,
+    .right-side {
+      text-align: left;
+      gap: 20px;
+    }
+  
+    .trackCall .left-side h2 {
+      font-size: 24px;
+      /* Adjusting font size for mobile */
+    }
+  
+  
+  }
+  
+  .Effi {
+    font-weight: bold;
+  }
+  
+  .ExperienceBenefits {
+    margin-top: 50px;
+  }
+  
+  .ExperienceBenefits .head {
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+  }
+  
+  @media (max-width: 1024px) {
+    .ExperienceBenefits .head {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  
+  .ExperienceBenefits .heading {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .ExperienceBenefits .text {
+    font-size: 18px;
+  }
+  
+  .images {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+  
+  }
+  
+  .images img {
+    margin-bottom: 20px;
+    width: 100%;
+    /* Makes the image responsive to screen width */
+    max-width: 1280px;
+    /* Limits the image width to 1280px */
+    height: auto;
+    /* Automatically adjusts height to maintain aspect ratio */
+    aspect-ratio: 16 / 9;
+    /* Ensures the aspect ratio is 16:9 */
+    object-fit: cover;
+    /* Ensures image is properly scaled */
+  }
+  
+  .images .imageTextheading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  
+  }
+  
+  .images .imagedesc {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  .Unlocking {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 100px;
+  }
+  
+  .UnlockingT {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .UnlockingCommunication {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .Unlocking .right-side p,
+  a {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  .imageTextheading {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  .UnlockingTextPercent {
+    font-size: 64px;
+    font-weight: bold;
+  
+  }
+  
+  @media (max-width: 1024px) {
+    .Unlocking {
+      display: flex;
+  
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .UnlockingT {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .UnlockingText {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  
+  .freeTrial {
+    margin-top: 50px;
+    text-align: center;
+    padding: 64px 0px;
+    background-color: grey;
+    /* You can keep this as fallback color */
+    background-image: url('https://images.ctfassets.net/pdf29us7flmy/7MAfLagu0g3iappEl8QH3S/5ebac5a5115d2ecd3eb357b992d949ee/GettyImages-643897728_optimized.jpg');
+    background-size: cover;
+    /* Ensures the image covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+  }
+  
+  .freeTrial .heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .freeTrial .desc {
+    font-size: 16px;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  .freeTrial .signup {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  .testimonials-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonials-section .subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Testimonials Container */
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .testimonial {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stars {
+    font-size: 18px;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+  
+  .feedback {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .customer-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .customer-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .position {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .testimonials-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .features-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .section-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section-description {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  
+  /* Features Container */
+  .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .feature-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .feature-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .feature-link:hover {
+    border-color: #333;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .features-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .mainContainer{
+    min-height: 100vh;
+  }
+  
+  .mainWrapper{
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media screen  and (max-width: 1536px){
+       .mainWrapper{
+        max-width: 1428px;
+       }
+  }
+  @media screen and (max-width: 1428px){
+    .mainWrapper{
+      max-width: 1366px;
+     }
+  }
+  @media screen and (max-width: 1366px){
+    .mainWrapper{
+      max-width: 1280px;
+     }
+  }
+  
+  @media screen and (max-width: 768px){
+    .mainWrapper{
+      max-width: 768px;
+      padding-left: 10px;
+      padding-right: 10px;
+     }
+  }
+  
